@@ -5,7 +5,10 @@ LABEL "com.github.actions.description"="Deploy artifacts to Nexus using Maven de
 LABEL "com.github.actions.icon"="box"
 LABEL "com.github.actions.color"="blue"
 
-COPY settings.xml /github/workspace/settings.xml
+LABEL "repository"="https://github.com/floriandorau/nexus-deploy-action"
+LABEL "maintainer"="Florian Dorau <fdorau@it-economics.de>"
+
+COPY settings.xml /project
 
 ADD entrypoint.sh /entrypoint.sh
 
