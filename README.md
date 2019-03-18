@@ -1,4 +1,4 @@
-# autopr-action #
+# nexus-deploy-action #
 
 Github action to automatically deploy artifacts to Nexus using Maven deploy plugin.
 
