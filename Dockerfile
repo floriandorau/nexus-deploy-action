@@ -5,7 +5,7 @@ LABEL "com.github.actions.description"="Deploy artifacts to Nexus using Maven de
 LABEL "com.github.actions.icon"="box"
 LABEL "com.github.actions.color"="blue"
 
-ADD settings.xml ./settings.xml
+ADD settings.xml ./github/workspace/settings.xml
 
 ADD entrypoint.sh /entrypoint.sh
 
