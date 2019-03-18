@@ -18,11 +18,11 @@ action "nexus-deploy" {
 }
 ```
 
-# Variables #
+## #Variables ##
 
 In order to run the deployment, the action requires the following variables passes via the enviroment.
 
-## Nexus variables ##
+### Nexus variables ###
 
 | Option      | Desc
 | ----------- | ---------------------------------------
@@ -30,7 +30,7 @@ In order to run the deployment, the action requires the following variables pass
 | NEXUS_USER  | User of the Nexus
 | NEXUS_PW    | Password of the Nexus user
 
-## Maven variables ##
+### Maven variables ###
 
 | Option        | Desc
 | -----------   | ---------------------------------------
