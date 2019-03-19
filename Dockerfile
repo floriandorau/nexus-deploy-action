@@ -8,8 +8,10 @@ LABEL "com.github.actions.color"="blue"
 LABEL "repository"="https://github.com/floriandorau/nexus-deploy-action"
 LABEL "maintainer"="Florian Dorau <fdorau@it-economics.de>"
 
+RUN mkdir /project
+
 COPY settings.xml /project
 
-ADD entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT [ "/entrypoint.sh" ]

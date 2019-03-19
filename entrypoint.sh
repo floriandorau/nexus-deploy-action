@@ -13,7 +13,7 @@ nexus_pw=$NEXUS_PW
 nexus_base=$NEXUS
 
 # Artifact
-artifact = $ARTIFACT
+artifact=$ARTIFACT
 
 nexus_url="https://$nexus_base/repository/$repositoryId"
 
