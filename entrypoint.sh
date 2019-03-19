@@ -14,12 +14,14 @@ nexus_base=$NEXUS
 
 # Artifact
 artifact="$ARTIFACT"
-extension=exe
+folder="$ARTIFACT_DIR"
+extension="$ARTIFACT_EXT"
+artifactPath="$folder$artifact.$extension"
 zippedArtifact="/project/$artifact.zip"
 nexus_url="https://$nexus_base/repository/$repositoryId"
 
-echo "Zipping '$artifact' to '$zippedArtifact'"
-zip -v $zippedArtifact "$artifact.$extension"
+echo "Zipping '$folder/$artifact' to '$zippedArtifact'"
+zip -v $zippedArtifact $artifactPath
 
 ls -la /project
 
