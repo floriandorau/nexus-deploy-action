@@ -21,9 +21,11 @@ echo "Deploying artifact '$artifact' to '$nexus_url' as '$groupId:$artifactId:$v
 
 ls -la /project
 
+zip pegasuspower-starter.zip $artifact
+
 mvn --settings /project/settings.xml deploy:deploy-file \
     -Durl=$nexus_url \
-    -Dfile=$artifact \
+    -Dfile=pegasuspower-starter.zip \
     -DgroupId=$groupId \
     -DrepositoryId=$repositoryId \
     -DartifactId=$artifactId \
