@@ -19,9 +19,9 @@ nexus_url="https://$nexus_base/repository/$repositoryId"
 
 echo "Deploying artifact '$artifact' to '$nexus_url' as '$groupId:$artifactId:$version'"
 
-ls -la
+ls -la /project
 
-mvn --settings settings.xml deploy:deploy-file \
+mvn --settings /project/settings.xml deploy:deploy-file \
     -Durl=$nexus_url \
     -Dfile=$artifact \
     -DgroupId=$groupId \

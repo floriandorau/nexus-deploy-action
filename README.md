@@ -18,7 +18,7 @@ action "nexus-deploy" {
 }
 ```
 
-## #Variables ##
+## Variables ##
 
 In order to run the deployment, the action requires the following variables passes via the enviroment.
 
