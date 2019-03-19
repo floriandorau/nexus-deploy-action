@@ -9,7 +9,7 @@ LABEL "repository"="https://github.com/floriandorau/nexus-deploy-action"
 LABEL "maintainer"="Florian Dorau <fdorau@it-economics.de>"
 
 RUN apt-get update && \
-    apt-get install -y zip
+    apt-get install -y zip jq
 
 RUN mkdir /project
 

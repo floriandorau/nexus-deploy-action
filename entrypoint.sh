@@ -11,6 +11,7 @@ packaging=zip
 nexus_user=$NEXUS_USER
 nexus_pw=$NEXUS_PW
 nexus_base=$NEXUS
+nexus_url="https://$nexus_base/repository/$repositoryId"
 
 # Artifact
 artifact="$ARTIFACT"
@@ -18,7 +19,7 @@ folder="$ARTIFACT_DIR"
 extension="$ARTIFACT_EXT"
 artifactPath="$folder$artifact.$extension"
 zippedArtifact="/project/$artifact.zip"
-nexus_url="https://$nexus_base/repository/$repositoryId"
+version=$(jq .version package.json) 
 
 echo "Zipping '$folder/$artifact' to '$zippedArtifact'"
 zip -j $zippedArtifact $artifactPath
