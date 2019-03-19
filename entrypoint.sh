@@ -21,9 +21,7 @@ zippedArtifact="/project/$artifact.zip"
 nexus_url="https://$nexus_base/repository/$repositoryId"
 
 echo "Zipping '$folder/$artifact' to '$zippedArtifact'"
-zip -v $zippedArtifact $artifactPath
-
-ls -la /project
+zip -j $zippedArtifact $artifactPath
 
 echo "Deploying artifact '$artifact' to '$nexus_url' as '$groupId:$artifactId:$version'"
 mvn --settings /project/settings.xml deploy:deploy-file \

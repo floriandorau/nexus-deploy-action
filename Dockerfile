@@ -14,7 +14,6 @@ RUN apt-get update && \
 RUN mkdir /project
 
 COPY settings.xml /project
-COPY Test.txt /project
 
 COPY entrypoint.sh /entrypoint.sh
 
