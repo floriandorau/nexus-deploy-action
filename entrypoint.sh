@@ -19,7 +19,9 @@ folder="$ARTIFACT_DIR"
 extension="$ARTIFACT_EXT"
 artifactPath="$folder$artifact.$extension"
 zippedArtifact="/project/$artifact.zip"
-version=$(jq .version package.json) 
+
+# Extract the version out of the package.json but strip the quotes
+version=$(jq -r .version package.json) 
 
 echo "Zipping '$folder/$artifact' to '$zippedArtifact'"
 zip -j $zippedArtifact $artifactPath
