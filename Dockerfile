@@ -8,9 +8,13 @@ LABEL "com.github.actions.color"="blue"
 LABEL "repository"="https://github.com/floriandorau/nexus-deploy-action"
 LABEL "maintainer"="Florian Dorau <fdorau@it-economics.de>"
 
+RUN apt-get update && \
+    apt-get install -y zip
+
 RUN mkdir /project
 
 COPY settings.xml /project
+COPY Test.txt /project
 
 COPY entrypoint.sh /entrypoint.sh
 
