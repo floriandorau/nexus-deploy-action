@@ -14,18 +14,18 @@ nexus_base=$NEXUS
 
 # Artifact
 artifact=$ARTIFACT
-zippedArtifact="pegasuspower-starter.zip"
+zippedArtifact="/project/pegasuspower-starter.zip"
 nexus_url="https://$nexus_base/repository/$repositoryId"
 
 echo "Zipping '$artifact' to '$zippedArtifact'"
-zip -vm $zippedArtifact $artifact
+zip -v $zippedArtifact $artifact
 
 ls -la
 
 echo "Deploying artifact '$artifact' to '$nexus_url' as '$groupId:$artifactId:$version'"
 mvn --settings /project/settings.xml deploy:deploy-file \
     -Durl=$nexus_url \
-    -Dfile=pegasuspower-starter.zip \
+    -Dfile=$zippedArtifact \
     -DgroupId=$groupId \
     -DrepositoryId=$repositoryId \
     -DartifactId=$artifactId \
