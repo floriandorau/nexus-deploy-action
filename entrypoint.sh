@@ -29,7 +29,7 @@ echo "Zipping '$folder/$artifact' to '$zippedArtifact'"
 zip -j $zippedArtifact $artifactPath
 
 echo "Deploying artifact '$artifact' to '$nexus_url' as '$groupId:$artifactId:$version'"
-mvn --settings /project/settings.xml deploy:deploy-file \
+mvn -B --settings /project/settings.xml deploy:deploy-file \
     -Durl=$nexus_url \
     -Dfile=$zippedArtifact \
     -DgroupId=$groupId \
