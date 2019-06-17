@@ -20,8 +20,6 @@ extension="$ARTIFACT_EXT"
 artifactPath="$folder$artifact.$extension"
 zippedArtifact="/project/$artifact.zip"
 
-env
-
 # Extract the version out of the package.json but strip the quotes
 version=$(jq -r .version package.json) 
 
